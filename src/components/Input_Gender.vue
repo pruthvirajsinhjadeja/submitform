@@ -8,12 +8,14 @@
                 <option>Female</option>
                
             </select>
+            <slot></slot>
         </div>
+        
     </div>
 </template>
 <script>
 export default {
-    name: 'FGender',
+    name: 'input-gender',
 
     data() {
         return {
