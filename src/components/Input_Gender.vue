@@ -16,13 +16,10 @@
 <script>
 export default {
     name: 'input-gender',
-
     data() {
         return {
             gender : '',
         };
     },
-
-  
 };
 </script>

@@ -7,15 +7,22 @@
     <form class="center" style="margin-bottom: 10px;">
       <div>
         <input-name>
-          <span class="text-danger" v-if="!$v.fname.required && isNameErrorVisible">The Name is required</span>
+          <span class="text-danger" v-if="!$v.fname.required && isNameErrorVisible">
+            The Name is required
+          </span>
         </input-name>
         <input-email>
-          <span class="text-danger" v-if="!$v.email.required && isEmailErrorVisible">The EMail is required</span>
-          <span class="text-danger" v-if="!$v.email.email">Please enter Valid Email</span>
+          <span class="text-danger" v-if="!$v.email.required && isEmailErrorVisible">
+            The EMail is required
+          </span>
+          <span class="text-danger" v-if="!$v.email.email">
+            Please enter Valid Email
+          </span>
         </input-email>
         <input-date-of-birth>
-          <span class="text-danger" v-if="!$v.DateOfBirth.required && isDateOFBirthErrorVisible">The Date Of birth is
-            required</span>
+          <span class="text-danger" v-if="!$v.DateOfBirth.required && isDateOFBirthErrorVisible">
+            The Date Of birth is required
+          </span>
         </input-date-of-birth>
         <input-gender>
           <span class="text-danger" v-if="!$v.gender.required && isGenderErrorVisible">The Gender is required</span>
@@ -54,11 +61,9 @@ export default {
     mobileNumber: {
       required,
       numeric,
-      minLength: minLength(1),
+      minLength: minLength(10),
       maxLength: maxLength(12)
     }
-
-
   },
   data() {
     return {
@@ -97,41 +102,14 @@ export default {
         self.isMobileErrorVisible = true;
         return;
       }
-      // alert('Data Submited');
       console.log(this.fname);
       console.log(this.email);
       console.log(this.DateOfBirth);
       console.log(this.gender);
       console.log(this.mobileNumber);
-
     },
-
   },
-  created() {
-    console.log(this.fname)
-  },
-
-
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
-</style>
